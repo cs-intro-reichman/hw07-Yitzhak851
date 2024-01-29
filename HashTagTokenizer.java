@@ -58,6 +58,8 @@ public class HashTagTokenizer {
 	 * @param dictionary
 	 */
 	public static void breakHashTag(String hashtag, String[] dictionary) {
+		// convert hashtag to lower case.
+		hashtag = hashtag.toLowerCase();
 		// Base case: do nothing (return) if hashtag is an empty string.
 		if (hashtag.isEmpty()) {
 			return;
