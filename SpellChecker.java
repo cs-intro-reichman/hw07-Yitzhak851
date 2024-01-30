@@ -32,6 +32,7 @@ public class SpellChecker {
 	 * @return - the head of the string
 	 */
 	public static char head(String str) {
+		str.toLowerCase(); // str in lower case
 		char head = str.charAt(0);
 		return head;
 	}
