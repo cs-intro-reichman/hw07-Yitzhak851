@@ -1,3 +1,4 @@
+// Good luck!
 public class SpellCheckerTester {
 
     static String FILE_NAME = "dictionary.txt";

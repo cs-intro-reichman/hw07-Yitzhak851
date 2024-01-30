@@ -1,5 +1,5 @@
 /**
- * This program get a hash tag as a string,
+ * This program get a hash-tag (#) as a string,
  * and break it into its constituent words.
  * 
  * @author - Yitzhak Bar or

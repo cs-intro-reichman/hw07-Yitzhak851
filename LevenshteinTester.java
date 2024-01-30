@@ -1,3 +1,6 @@
+/**
+ * This is the tester class for the Levenshtein class.
+ */
 public class LevenshteinTester {
 
     public static void main(String[] args) {

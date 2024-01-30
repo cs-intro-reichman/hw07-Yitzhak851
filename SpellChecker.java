@@ -1,12 +1,17 @@
-
+/**
+ * This program get a hash-tag (#) as a string,
+ * and break it into its constituent words.
+ * 
+ * @author - Yitzhak Bar or
+ * @version - 1.0
+ */
 public class SpellChecker {
 	public static void main(String[] args) {
-		String word1 = args[0]; // the word to be checked
-		String word2 = args[1]; // the word to be checked
-		System.out.println(levenshtein(word1, word2));
+		// String word1 = args[0]; // the word to be checked
+		// String word2 = args[1]; // the word to be checked
+		// System.out.println(levenshtein(word1, word2));
 		// int threshold = Integer.parseInt(args[1]); // the threshold value
 		// String[] dictionary = readDictionary("dictionary.txt");
-
 		// String correction = spellChecker(word, threshold, dictionary);
 		// System.out.println(correction);
 	}
@@ -48,8 +53,12 @@ public class SpellChecker {
 		word2 = word2.toLowerCase(); // word2 in lower case
 		int a = word1.length();
 		int b = word2.length();
-		if (a == 0) {return b;}
-		if (b == 0) {return a;}
+		if (a == 0) {
+			return b;
+		}
+		if (b == 0) {
+			return a;
+		}
 		if (head(word1) == head(word2)) {
 			return levenshtein(tail(word1), tail(word2));
 		}
