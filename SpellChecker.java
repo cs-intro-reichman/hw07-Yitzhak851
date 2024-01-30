@@ -1,12 +1,14 @@
 
 public class SpellChecker {
 	public static void main(String[] args) {
-		String word = args[0]; // the word to be checked
-		int threshold = Integer.parseInt(args[1]); // the threshold value
-		String[] dictionary = readDictionary("dictionary.txt");
+		String word1 = args[0]; // the word to be checked
+		String word2 = args[1]; // the word to be checked
+		System.out.println(levenshtein(word1, word2));
+		// int threshold = Integer.parseInt(args[1]); // the threshold value
+		// String[] dictionary = readDictionary("dictionary.txt");
 
-		String correction = spellChecker(word, threshold, dictionary);
-		System.out.println(correction);
+		// String correction = spellChecker(word, threshold, dictionary);
+		// System.out.println(correction);
 	}
 
 	/**
@@ -17,11 +19,7 @@ public class SpellChecker {
 	 * @return - the tail of the string
 	 */
 	public static String tail(String str) {
-		// declare variables:
-		int a = str.length();
-		str.toLowerCase(); // str in lower case
-		String tail = str.substring(a - a + 1); // tail - the string without the first char
-		tail.toLowerCase(); // str in lower case
+		String tail = str.substring(1);
 		return tail;
 	}
 
@@ -33,7 +31,6 @@ public class SpellChecker {
 	 * @return - the head of the string
 	 */
 	public static char head(String str) {
-		str.toLowerCase(); // str in lower case
 		char head = str.charAt(0);
 		return head;
 	}
@@ -47,6 +44,8 @@ public class SpellChecker {
 	 * @return - the levenshtein distance between the two strings
 	 */
 	public static int levenshtein(String word1, String word2) {
+		word1 = word1.toLowerCase(); // word1 in lower case
+		word2 = word2.toLowerCase(); // word2 in lower case
 		int a = word1.length();
 		int b = word2.length();
 		if (a == 0) {return b;}
