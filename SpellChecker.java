@@ -21,6 +21,7 @@ public class SpellChecker {
 		int a = str.length();
 		str.toLowerCase(); // str in lower case
 		String tail = str.substring(a - a + 1); // tail - the string without the first char
+		tail.toLowerCase(); // str in lower case
 		return tail;
 	}
 
