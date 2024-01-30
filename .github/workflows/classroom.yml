@@ -19,3 +19,5 @@ jobs:
         java-version: '21'
     - uses: actions/checkout@v2
     - uses: education/autograding@v1
+
+    # Good luck!
